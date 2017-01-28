@@ -1,0 +1,45 @@
+public class Boleto {
+	
+  private String numeroConta;
+  private double valorConta;
+  
+  //Construtor
+  public Boleto(String numeroContaInicial, double valorTotal){
+  	numeroConta = numeroContaInicial;
+    valorConta = valorTotal;
+  }
+  
+  
+  
+  
+  public static void main(String[] args){
+  	Boleto bol1 = new Boleto("28876-0",3000);
+    System.out.println("Apresentando dados do Boleto: ");
+    System.out.println("numero da conta: " + bol1.getNumeroConta());
+    System.out.println("valor a pagar: R$" + bol1.getValorConta());
+  }
+  
+  
+  
+  
+  
+  //metodo
+  public void pagar(double valorPago){
+  	valorConta = valorConta - valorPago;
+  }
+  
+  
+  //setters and getters
+  public void setValorConta(double novoValorConta){
+  	valorConta = novoValorConta;
+  }
+  
+  public double getValorConta(){
+  	return valorConta;
+  }
+  
+  public String getNumeroConta(){
+  	return numeroConta;
+  }
+
+}
